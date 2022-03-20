@@ -17,6 +17,7 @@ public class Computadora {
     private Teclado teclado;
 
     public Computadora() {
+        
     }
 
     public Computadora(String marca, String modelo, Monitor pantalla, Mouse ratón, Procesador cpu, Teclado teclado) {
@@ -78,6 +79,11 @@ public class Computadora {
 
     @Override
     public String toString() {
+        /*String estado ="Marca: " + this.marca + "\n";
+        estado = estado + "Modelo: " + this.modelo + "\n";
+        estado = estado + "Ratón: Marca " + this.ratón.getMarca() + ", Tipo: " + this.getRatón().getTipo() + "\n";
+        
+        return estado;*/
         return "Computadora{" + "marca=" + marca + ", modelo=" + modelo + ", pantalla=" + pantalla + ", rat\u00f3n=" + ratón + ", cpu=" + cpu + ", teclado=" + teclado + '}';
     }
     

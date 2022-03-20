@@ -1,7 +1,11 @@
 package reutilizacióncódigo2209;
 
 import Asus.com.Computadora;
+import IcoFesComponentes.Monitor;
+import IcoFesComponentes.Mouse;
 import IcoFesComponentes.Procesador;
+import IcoFesComponentes.Teclado;
+import ico.fes.herencia.Alumno;
 import javax.swing.JFrame;
 
 /**
@@ -26,7 +30,31 @@ public class ReutilizaciónCódigo2209 {
         miCompu.setMarca("Asus");
         miCompu.setCpu(new Procesador("Intel", 2.6f));
         System.out.println(miCompu);
+        miCompu.getCpu().setMarca("AMD");
+        System.out.println(miCompu);
+        //Ejercicio: Establecer un mouse de marca Logitech del tipo Optico
+        miCompu.setRatón(new Mouse("Logitech", "Óptico"));
+        System.out.println(miCompu);
         
+        Computadora compu2 = new Computadora("Apple", "MacbookPro", 
+                new Monitor("Toshiba", 14.3f), 
+                new Mouse("Acteck", "Óptico"),
+                new Procesador("M1", 3.4f),
+                new Teclado("Apple", 101));
+        System.out.println(compu2);
+            //cambiar mouse a apple y touch
+            compu2.getRatón().setMarca("Apple");
+            compu2.getRatón().setTipo("Touch");
+            System.out.println(compu2);
+            
+        System.out.println("======================================");
+        Alumno alu1 = new Alumno();
+        alu1.setNombre("José");
+        System.out.println(alu1);
+        
+        Alumno alu2 = new Alumno("319030693", "ICO", "José Perez", 19);
+        System.out.println(alu2);
+            
     }
     
 }
