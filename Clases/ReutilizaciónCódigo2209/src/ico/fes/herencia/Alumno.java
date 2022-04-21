@@ -45,4 +45,16 @@ public class Alumno extends Persona{
     {
         System.out.println(this.getNombre()+ " Está estudiando " + cantidad + "hrs." );
     }
+    //POLIMORFISMO POR SOBREESCRITURA
+    @Override
+    public void dormir(){
+       System.out.println("El estudiante " + this.getNombre() + " está durmiendo 5 horas. . .");
+    }
+    
+    //POLIMORFISMO POR SOBRECARGA
+    public void dormir(int horasEstudio){
+        int horasDormir = 8;
+        System.out.println(this.getNombre() + " está durmiendo " + (horasDormir - horasEstudio) + " horas");
+    }
+    
 }
