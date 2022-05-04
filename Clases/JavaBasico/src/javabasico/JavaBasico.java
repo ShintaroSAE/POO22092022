@@ -1,6 +1,8 @@
 package javabasico;
 
 import java.awt.Color;
+import java.util.ArrayList;
+import java.util.stream.Collectors;
 import javax.swing.JOptionPane;
 
 /**
@@ -118,6 +120,47 @@ public class JavaBasico {
         for (Alumno alumno : lista) {
             System.out.println(alumno.evaluarDesempenio());
         }
+        System.out.println("====================ARRAY LIST=====================");
+        ArrayList<Alumno> grupo2209 = new ArrayList<Alumno>();
+        grupo2209.add(new Alumno("99999", 2, 9.0f));
+        grupo2209.add(new Alumno("88888", 2, 8.0f));
+        grupo2209.add(new Alumno("77777", 2, 7.0f));
+        grupo2209.add(new Alumno("66666", 2, 6.0f));
+        grupo2209.add(new Alumno("55555", 2, 5.0f));
+        
+        for (Alumno alumno : grupo2209) {
+            System.out.println(alumno);
+        }
+        grupo2209.add(2, new Alumno("81111", 3, 9.9f));
+        System.out.println("===================================================");
+        for (Alumno alumno : grupo2209) {
+            System.out.println(alumno);
+        }
+        
+        Alumno tmp = grupo2209.get(3);
+        System.out.println("Alumno en index 1: " + tmp);
+        
+        System.out.println("Eliminar el index 3");
+        Alumno tmp2 = grupo2209.remove(3);
+        System.out.println("Elemento removido: " + tmp2);
+        for (Alumno alumno : grupo2209) {
+            System.out.println(alumno);
+        }
+        System.out.println("==============REEMPLAZAR EL I-ESIMO ELEMENTO================");
+        Alumno tmp3 = grupo2209.set(0,new Alumno("44444",4,4.0f));
+        System.out.println("El sacado es: " + tmp3);
+        for (Alumno alumno : grupo2209) {
+            System.out.println(alumno);
+        }
+        System.out.println("============================EXCEPCIONES========================");
+        try {
+            System.out.println(grupo2209.get(20));
+        } catch (Exception e) {
+            System.out.println("Error... Revisa los indices");
+        }
+        System.out.println("Fin del programa");
+        
+        
     }
     
 }
